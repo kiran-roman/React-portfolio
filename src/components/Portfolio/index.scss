@@ -1,0 +1,237 @@
+
+.text-zone{
+position:absolute;
+left: 10%;
+top:10%;
+display: grid;
+font-family:'Coolvetica';
+}
+
+h3{
+    font-size: 42px;
+    font-weight: 500;
+    color: #ffd700;
+    font-family:'Coolvetica';
+}
+.row{
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.single-property{
+    width: 350px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgb(0 0 0 /50%);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.column{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.property-thumb{
+    position: relative;
+    overflow: hidden;
+}
+.property-tag{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: rgb(0 0 0 /30%);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-family:'Gabriola';
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.property-tag:hover{
+
+    color: red;
+}
+h1{
+    text-align: left;
+    font-size: 53px;
+    font-family:'Coolvetica';
+    font-weight: 400;
+    color:#ffd700;
+    position:relative;
+    margin-bottom: 28px;
+    left: 10%;
+&::before{
+    content: '<h1>';
+    font-family: 'La Belle Aurore';
+    color: #ffd700;
+    font-size: 18px;
+    position:absolute;
+    margin-top: -20px; 
+    left: -10px;
+    opacity: 0.6;
+    line-height: 18px;
+}
+&::after{
+    content: '</h1>';
+    font-family: 'La Belle Aurore';
+    color: #ffd700;
+    font-size: 18px;
+    line-height:18px;
+    position:absolute;
+    left:-25px;
+    bottom:-30px;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+}
+.property-thumb img{
+  
+    width: 350px;
+    vertical-align: middle;
+    transition: .3s;
+}
+.single-property:hover .property-thumb img{
+    transform: scale(1.08);
+}
+.property-content{
+    padding: 20px;
+    border-bottom: 1px solid #ffd700;
+}
+.property-content h3{
+    margin-bottom:  8px;
+    font-size: 22px;
+    color:#ffd700;
+    font-weight: 500;
+}
+.mark span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffd700;
+    margin-left: 5px;
+}
+
+.property-footer{
+    padding: 1px ;
+}
+.property-footer ul{
+    list-style: none;
+    justify-content:center;
+}
+.property-footer ul li a{
+    padding-left: 5px;
+    padding-right: 30px;
+    color: #ffd700;
+    text-decoration: none;
+}
+.property-footer ul li a:visited{
+    color:#000000;
+}
+
+.property-footer ul li {
+    text-align: center;
+    color: #ffd900;
+    font-size: 20px;
+    font-weight: 400px;
+    }
+button{
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    background-color:rgb(0 0 0 /0%);
+}
+button:focus{
+    color: red;
+}
+@media screen and (max-width: 1156px){
+    .text-zone{
+        left:0;
+    }
+    .row{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:768px){
+    .text-zone{
+        left: 5%;
+    }
+    .row{
+        grid-template-columns: 1fr;
+    }
+    .single-property{
+        width: 500px;
+    }
+    .column{
+        padding-bottom: 2rem;
+    }
+    .property-thumb img{
+        width: 500px;
+    }
+    .property-content{
+        padding: 15px;
+    }
+}
+@media screen and (max-width:560px) {
+    .text-zone{
+        left: 8px;
+    }
+    .single-property{
+        width: 450px;
+    }
+    .column{
+       
+        padding-bottom: 1rem;
+    }
+    .property-thumb img{
+        width: 450px;
+    }
+}
+@media screen and (max-width:493px) {
+    .text-zone{
+        left: 10px;
+    }
+    h3{
+        font-size: 35px;
+    }
+    .single-property{
+        width: 400px;
+    }
+    .column{
+       
+        padding-bottom: 1rem;
+    }
+    .property-thumb img{
+        width: 400px;
+    }
+}
+@media screen and (max-width:430px) {
+    .single-property{
+        width: 350px;
+    }
+    .column{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .property-thumb img{
+        width: 350px;
+    }
+    
+}
+@media screen and (max-width:380px) {
+    .text-zone{
+        left: 3px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    .single-property{
+        width: 300px;
+    }
+    .column{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .property-thumb img{
+        width: 300px;
+    }
+  
+}
