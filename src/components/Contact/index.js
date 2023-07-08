@@ -7,6 +7,9 @@ import emailjs from '@emailjs/browser'
 import { MapContainer } from 'react-leaflet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+
 const Contact =()=>{
     const [letterClass,setLetterClass]= useState('text-animate')
     const refForm=useRef()
@@ -17,6 +20,7 @@ const Contact =()=>{
      },[])
      const sendEmail=(e)=>{
         e.preventDefault()
+        if (isLoggedIn){
         emailjs.sendForm('service_tsxgrv9','template_pu2lfr3',refForm.current,'uqP9veCRSn_H1TXWg')
         .then(
             ()=>{
@@ -26,7 +30,11 @@ const Contact =()=>{
             ()=>{
                 alert('Failed to send the message')
             }
-        )
+        )}
+        else{
+            window.location.replace('/Login')
+         
+          }
     }
     return(
         <>
@@ -59,9 +67,10 @@ const Contact =()=>{
                     </li>
                     <li>
                         <input type="submit" className='flat-button' value="SEND"/>
+                        
                     </li>
                 </ul>
-            </form>
+          </form>
           </div>
           </div>
         
@@ -85,22 +94,22 @@ const Contact =()=>{
         <div className='contact-list'>
           <ul>
         <li>
-            <a target="_blank" rel='noref' href='https://www.linkedin.com/in/kiran-e-1b788221b/'>
+            <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/kiran-e-1b788221b/'>
                 <FontAwesomeIcon icon={faLinkedin} color='#00007B'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://github.com/kiran-roman'>
+            <a target="_blank" rel="noreferrer" href='https://github.com/kiran-roman'>
                 <FontAwesomeIcon icon={faGithub} color='#000000'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://www.instagram.com/_kiran_roman_/'>
+            <a target="_blank" rel="noreferrer" href='https://www.instagram.com/_kiran_roman_/'>
                 <FontAwesomeIcon icon={faInstagram} color='#E1306C'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://twitter.com/_Kiran_Roman_/'>
+            <a target="_blank" rel="noreferrer" href='https://twitter.com/_Kiran_Roman_/'>
                 <FontAwesomeIcon icon={faTwitter} color='#0096FF'/>
             </a>
         </li>

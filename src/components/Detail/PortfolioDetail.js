@@ -1,6 +1,7 @@
 const PortfolioDetail=[
     {
-        id:"1",
+        
+        id:1,
         Image:"Screenshot .png",
         heading:"Project 1",
         span:"portfoliowebsite",
@@ -8,7 +9,7 @@ const PortfolioDetail=[
         
     },
     {
-        id:"2",
+        id:2,
         Image:"coming_soon 1.jpg",
         heading:"Project 2",
         span:"building",
@@ -16,7 +17,7 @@ const PortfolioDetail=[
         
     },
     {
-        id:"3",
+        id:3,
         Image:"coming_soon 1.jpg",
         heading:"Project 3",
         span:"building",

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from '../Home/logo'
 
+
 const Home = () => {
     const [letterClass,setLetterClass]= useState('text-animate')
     const nameArray=['i','r','a','n']
@@ -17,6 +18,7 @@ const Home = () => {
     },[])
   return (
     <>
+    
       <div className="home-page">
         <div className="text-zone">
         <h1>
@@ -38,12 +40,13 @@ const Home = () => {
           </h1>
           <h2>Front End Developer / Python Expert / Mobile App Developer </h2>
           <Link to="/contact" className="flat-button">CONTACT ME</Link>
-          <a  className="flat-dbutton" href='https://drive.google.com/file/d/1-wP9pprAm-XXIxaNVPE-nzLE2ehq0mDF/view?usp=drivesdk' download="'https://drive.google.com/file/d/1-wP9pprAm-XXIxaNVPE-nzLE2ehq0mDF/view?usp=drivesdk'"> DOWNLOAD CV</a>
+          <a  className="flat-dbutton" href='https://drive.google.com/file/d/1-wP9pprAm-XXIxaNVPE-nzLE2ehq0mDF/view?usp=drivesdk' > DOWNLOAD CV</a>
         </div>
         <Logo></Logo>
-      </div>
-      <Loader type="pacman"/>
+    </div>
+    <Loader type='pacman'></Loader>
     </>
+    
   )
 }
 

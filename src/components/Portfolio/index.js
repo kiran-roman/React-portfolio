@@ -24,7 +24,7 @@ const Portfolio=()=>{
                     letterClass={letterClass}
                     strArray={['P','r','o','j','e','c','t','s']}
                     idx={15}></AnimatedLetters> </h1>  
-        <emoji/>
+      
         <div className='row'>
           {
             detail.map((detail)=>{

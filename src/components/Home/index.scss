@@ -9,6 +9,7 @@
         display:table-cell;
         max-height: 90%;
     }
+    
   
     h1{
         font-size: 56px;
@@ -52,7 +53,7 @@
       img {
         margin-left: 20px;
         opacity: 0;
-        width: 32px;
+        width: 35px;
         height: auto;
         animation: rotateIn 1s linear both;
         animation-delay: 1.4s;
@@ -91,7 +92,9 @@
     .flat-dbutton{
         margin-left: 5px;
     }
+   
 }
+
 @media screen and (max-width: 1200px){
     .tags,
     .home-page h1::before ,
@@ -99,6 +102,9 @@
         display: none;
     }
     .home-page{
+        h1{
+            font-size: 56px;
+        }
         .text-zone{
             position: initial;
             width: 100%;
@@ -121,4 +127,68 @@
          
         }
     }
+}
+@media screen and (max-width:900px) {
+    .home-page{
+    h1{
+        font-size: 75px;
+   
+    img {
+        width: 45px;   
+        
+    } }
+    .logo-container{
+        width: 350px;
+    }
+}
+}
+@media screen and (max-width:700px) {
+    .home-page{
+    h1{
+        font-size: 65px;
+   
+    img {
+        width: 45px;   
+        
+    } }
+    .logo-container{
+        width: 350px;
+    }
+}
+}
+@media screen and (max-width:600px) {
+    .home-page{
+    h1{
+        font-size: 60px;
+   
+    img {
+        width: 42px;
+    } }
+    .logo-container{
+        width: 250px;
+    }
+}
+}
+@media screen and (max-width:500px) {
+    .home-page{
+    h1{
+        font-size: 58px;
+        img {
+            width: 39px;
+        }
+    }
+    .logo-container{
+        width: 220px;
+    }
+}
+}
+@media screen and (max-width:410px) {
+    .home-page{
+    h1{
+        font-size: 53px;
+    }
+    .logo-container{
+        width: 200px;
+    }
+}
 }

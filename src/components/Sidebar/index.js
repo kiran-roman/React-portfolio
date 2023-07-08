@@ -6,7 +6,18 @@ import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import{faHome,faEnvelope,faUser,faBars,faClose,faStore} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
+const handleSubmit = (event) => {
+    event.preventDefault();
+  if (isLoggedIn){
+    localStorage.removeItem('isLoggedIn');
+    window.location.replace('/')
+  }
+  else{
+    window.location.replace('/Login')
+  }
+  }
 const Sidebar = () =>{
     const [showNav,setShowNav]=useState(false);
 return(
@@ -36,30 +47,38 @@ return(
             exact="true" activeclassname="active" className='contact-link'to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
             </NavLink>
+           
+            <form onSubmit={handleSubmit}>
+        <button  type="submit" className="flat-button">{isLoggedIn ? "Logout" :  " -Login- " }</button></form>
+            
             <FontAwesomeIcon 
             onClick={()=>setShowNav(false)}
             icon={faClose} color="#ffd700" size='3x' className='close-icon'/>
         </nav>
         <ul>
         <li>
-            <a target="_blank" rel='noref' href='https://www.linkedin.com/in/kiran-e-1b788221b/'>
+            <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/kiran-e-1b788221b/'>
                 <FontAwesomeIcon icon={faLinkedin} color='4d4d4e'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://github.com/kiran-roman'>
+            <a target="_blank" rel="noreferrer" href='https://github.com/kiran-roman'>
                 <FontAwesomeIcon icon={faGithub} color='4d4d4e'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://www.instagram.com/_kiran_roman_/'>
+            <a target="_blank"rel="noreferrer" href='https://www.instagram.com/_kiran_roman_/'>
                 <FontAwesomeIcon icon={faInstagram} color='4d4d4e'/>
             </a>
         </li>
         <li>
-            <a target="_blank" rel='noref' href='https://twitter.com/_Kiran_Roman_/'>
+            <a target="_blank" rel="noreferrer" href='https://twitter.com/_Kiran_Roman_/'>
                 <FontAwesomeIcon icon={faTwitter} color='4d4d4e'/>
             </a>
+        </li>
+        <li>
+        <form onSubmit={handleSubmit}>
+        <button  type="submit" className="flat-button">{isLoggedIn ? "Logout" :  " -Login- " }</button></form>
         </li>
         </ul>
         <FontAwesomeIcon 
